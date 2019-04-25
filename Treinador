@@ -1,0 +1,81 @@
+package batalhaPokemon;
+
+public class Treinador { 
+	public static int numpok = 6;
+	
+	public class Pokemon {
+		int HP;
+		String Nome;
+		int Type;
+		int Def;
+		
+		public void pokemon(String nome,int hp, int type, int def) {
+			int HP = hp;
+			String Nome = nome;
+			int Type = type;
+			int Def = def;
+		}
+		
+		public void useatk(habilidade ataque) {
+			System.out.println(Nome + "Uso" + ataque);
+		}
+		
+	}
+	public class habilidade implements Ataque{
+		int Power;
+		int Speed;
+		int TypeAtk;
+		
+		public void ataque(int power, int speed, int typeatk) {
+			int Power = power;
+			int Speed = speed;
+			int TypeAtk = typeatk;
+		}
+	}
+}
+
+
+
+// (1)Bug, (2)Dragon, (3)Electric, (4)Fighting, (5)Fire, (6)Flying, 
+//(7)Ghost, (8)Grass,(9)Ground,(10)Ice, (11)Normal, (12)Poison, (13)Psychic, (14)Rock and(15)Water
+
+// Super effective:
+//4 > 11,14,10.
+//6 > 4,1,8.
+//12 > 8.
+//9 > 5,12,3,14.
+//14 > 4,1,5,10
+//1 > 8,13.
+//7 >7,13.
+//5 > 1,8,10.
+//15 > 9,5,14
+//8 > 9,14,15
+//3 > 6,15.
+//13 > 12,4.
+//10 > 6,9,8,2
+//2 > 2
+
+//Not very effective:
+//11 < 14
+//4 < 6,1,12,13.
+//6 < 3, 14.
+//12 < 12,9,14,7,
+//9 < 1,8.
+//14 < 4,9.
+//1 < 4,6,12,5,7.
+//5 < 5,2,15,14.
+//15 < 15,8,2.
+//8 < 6,12,1,5,8,2.
+//3 < 8,3,2.
+//13 < 13
+//10 < 5,10,15
+
+//No effect:
+//11 = 7.
+//4 = 7.
+//9 = 6.
+//7 = 11.
+//3 = 9
+
+
+//DAMAGE = ((42 * power * ATK/DEF)/50) + 2
