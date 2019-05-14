@@ -2,8 +2,8 @@ package batalhaPokemon;
 
 public class Doduo extends Pokemon{
 	
-	int HP = 274;
-	int HPMAX = 274;
+	int HP = 272;
+	int HPMAX = 272;
 	String Nome = "Dodou";
 	int Type1 = 6;
 	int Type2 = 11;
